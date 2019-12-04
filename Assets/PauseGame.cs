@@ -10,10 +10,9 @@ public class PauseGame : MonoBehaviour
 
     void Update()
     {
-       
         if(Input.GetButtonDown("Cancel"))
         {
-            if(gamePaused == false)
+            if (gamePaused == false)
             {
                 Time.timeScale = 0;
                 gamePaused = true;
@@ -23,10 +22,7 @@ public class PauseGame : MonoBehaviour
 
             else
             {
-                pauseMenu.SetActive(false);
-                Cursor.visible = false;
-                gamePaused = false;
-                Time.timeScale = 1;
+                UnpauseGame();
             }
         }
     }

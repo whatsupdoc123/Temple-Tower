@@ -53,6 +53,7 @@ public class Movement : MonoBehaviour
     }
     void Start()
     {
+        Time.timeScale = 1;
         anim = GetComponent<Animator>();  
         rb = GetComponent<Rigidbody>();
         text = scoreText.GetComponent<TextMeshProUGUI>();
@@ -62,7 +63,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        Time.timeScale = 1;
         if (isPaused)
         {
             //pause menu goes here
