@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1808,7 +1808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &544842329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2767,7 +2767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &719499005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,7 +2797,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -3653,11 +3653,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2634142790031373997, guid: 5eb3e620a53411449a891c1f5c385683,
-        type: 3}
-      propertyPath: m_Name
-      value: ModularColumnNoDetail
-      objectReference: {fileID: 0}
     - target: {fileID: 9195066523563656831, guid: 5eb3e620a53411449a891c1f5c385683,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3712,6 +3707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634142790031373997, guid: 5eb3e620a53411449a891c1f5c385683,
+        type: 3}
+      propertyPath: m_Name
+      value: ModularColumnNoDetail
       objectReference: {fileID: 0}
     - target: {fileID: 5985893893547486043, guid: 5eb3e620a53411449a891c1f5c385683,
         type: 3}
@@ -5190,11 +5190,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2634142790031373997, guid: 5eb3e620a53411449a891c1f5c385683,
-        type: 3}
-      propertyPath: m_Name
-      value: ModularColumnNoDetail (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 9195066523563656831, guid: 5eb3e620a53411449a891c1f5c385683,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5249,6 +5244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634142790031373997, guid: 5eb3e620a53411449a891c1f5c385683,
+        type: 3}
+      propertyPath: m_Name
+      value: ModularColumnNoDetail (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5985893893547486043, guid: 5eb3e620a53411449a891c1f5c385683,
         type: 3}

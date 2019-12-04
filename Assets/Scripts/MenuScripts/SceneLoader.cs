@@ -9,6 +9,6 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     public void RunGame()
     {
-        SceneManager.LoadScene("JIC3");
+        SceneManager.LoadScene("JIC4");
     }
 }

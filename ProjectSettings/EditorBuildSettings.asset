@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: fd4aeae5cebd5ad4083ccbb822acd167
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/JIC3.unity
-    guid: 4452cd729aaccf347b9cdc029b9f8a72
+    path: Assets/Scenes/JIC4.unity
+    guid: 7b39ca990f0886040bea9c8e310c0f32
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 181aab0e8c590824b847a26c0232feff
   m_configObjects: {}

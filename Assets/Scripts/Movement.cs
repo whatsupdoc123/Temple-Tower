@@ -69,12 +69,7 @@ public class Movement : MonoBehaviour
         }
         else if (isDead)
         {
-            Time.timeScale = 0;
-            gameOverScreen.SetActive(true);
-
-            if (Input.anyKey)
-                SceneManager.LoadScene("Menu");
-
+            SceneManager.LoadScene("DeathScene");
         }
         else if (isWhipping && playedOnce == false)
         {
