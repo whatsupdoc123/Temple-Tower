@@ -5,7 +5,8 @@ using Cinemachine;
 
 public class MoveSegment : MonoBehaviour
 {
-
+    public GameObject mechanism;
+    private Animator anim;
     public CinemachineVirtualCamera vcam;
     public Transform player;
     public GameObject Movement;
@@ -20,6 +21,7 @@ public class MoveSegment : MonoBehaviour
     public float movingSpeed;
     public bool isMoving = false;
     public bool isLeft = false;
+    private bool playOnce = false;
 
     public Transform leftPoint;
     public Transform rightPoint;
@@ -29,6 +31,7 @@ public class MoveSegment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = mechanism.GetComponent<Animator>();
         Movement = GameObject.FindGameObjectWithTag("Player");
         movementScript = Movement.GetComponent<Movement>();
         originalPosition = vcam.m_Lens.FieldOfView;
@@ -49,6 +52,7 @@ public class MoveSegment : MonoBehaviour
                 isMoving = true;
                 isLocked = false;
                 isLeft = true;
+                MoveAnim();
 
                 target.position = new Vector3(level.transform.position.x - distance, level.transform.position.y, level.transform.position.z);
             }
@@ -57,13 +61,14 @@ public class MoveSegment : MonoBehaviour
                 isMoving = true;
                 isLocked = false;
                 isLeft = false;
+                MoveAnim();
             }
         }
 
         if (isMoving)
         {
             ZoomBack();
-            SegmentMover();
+            SegmentMover();            
         }
     }
 
@@ -110,7 +115,18 @@ public class MoveSegment : MonoBehaviour
             {
                 target.transform.position = new Vector3(level.transform.position.x + distance, level.transform.position.y, level.transform.position.z);
                 isMoving = false;
+                IdleAnim();
             }
         }
+    }
+
+    public void IdleAnim()
+    {
+        anim.Play("FloorMechanismImdle");
+    }
+
+    public void MoveAnim()
+    {
+        anim.Play("FloorMechanismTurnLeft");
     }
 }
