@@ -70,7 +70,7 @@ public class Movement : MonoBehaviour
         {
             //play whipping animation on Miles and the Whip
             anim.Play("MilesWhipExtend"); //player whipping animation
-            whipAnim.Play("WhipExtend"); //whip estending animation
+            whipAnim.Play("WhipExtendV2"); //whip estending animation
             playedOnce = true; //temp variable to make the animation play once and not loop on Update();
         }
         else if (!isWhipping)
