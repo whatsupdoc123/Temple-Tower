@@ -51,6 +51,7 @@ public class Movement : MonoBehaviour
     void Awake()
     {
         audioData = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
     }
     void Start()
     {
