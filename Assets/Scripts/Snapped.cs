@@ -12,13 +12,7 @@ public class Snapped : MonoBehaviour
     private void Start()
     {
         // calculates offset for segment thats being moved
-        if (Mathf.Abs(transform.position.x) > Mathf.Abs(otherSnap.transform.position.x))
-        {
-            offset = (Mathf.Abs(transform.position.x) - Mathf.Abs(otherSnap.transform.position.x)) / 2;
-        }
-        else
-            offset = (Mathf.Abs(otherSnap.transform.position.x) - Mathf.Abs(transform.position.x)) / 2;
-
+        offset = Vector3.Distance(transform.position, otherSnap.transform.position) / 2;
         if (gameObject.tag == "SnapPointRight")
             offset -= offset * 2;
     }
