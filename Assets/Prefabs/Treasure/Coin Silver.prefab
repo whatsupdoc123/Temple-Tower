@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7369358834756650451}
   - component: {fileID: 6407940763263715043}
   - component: {fileID: 7725444467971192440}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Coin Silver
   m_TagString: silver
   m_Icon: {fileID: 0}

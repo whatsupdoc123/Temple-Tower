@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6942081147487904099}
   - component: {fileID: -1908438691740599822}
   - component: {fileID: 2031258837501530729}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Coin Green
   m_TagString: green
   m_Icon: {fileID: 0}
