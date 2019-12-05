@@ -247,18 +247,21 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "green")
         {
+            audioData.clip = audioClipArray[10];
             isGreen++;
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "gold")
         {
+            audioData.clip = audioClipArray[10];
             isGold++;
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "silver")
         {
+            audioData.clip = audioClipArray[10];
             isSilver++;
             Destroy(collision.gameObject);
         }
