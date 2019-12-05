@@ -246,6 +246,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "green")
         {
             audioData.clip = audioClipArray[10];
+            audioData.PlayOneShot(audioData.clip);
             isGreen++;
             Destroy(collision.gameObject);
         }
@@ -253,6 +254,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "gold")
         {
             audioData.clip = audioClipArray[10];
+            audioData.PlayOneShot(audioData.clip);
             isGold++;
             Destroy(collision.gameObject);
         }
@@ -260,6 +262,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "silver")
         {
             audioData.clip = audioClipArray[10];
+            audioData.PlayOneShot(audioData.clip);
             isSilver++;
             Destroy(collision.gameObject);
         }
