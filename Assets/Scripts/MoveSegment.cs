@@ -21,7 +21,6 @@ public class MoveSegment : MonoBehaviour
     public float movingSpeed;
     public bool isMoving = false;
     public bool isLeft = false;
-    private bool playOnce = false;
 
     public Transform leftPoint;
     public Transform rightPoint;

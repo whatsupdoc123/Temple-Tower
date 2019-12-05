@@ -68,7 +68,6 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown("a") || Input.GetKeyDown("d"))
             {
-                Debug.Log("Hello");
                 MilesPullBack();
                 WhipPullBack();
                 StartCoroutine(WhipDelay());
@@ -88,7 +87,6 @@ public class Movement : MonoBehaviour
             whipAnim.Play("WhipExtendV2"); //whip estending animation
             if (!isLocked && playedOnce == false)
             {
-                Debug.Log("heelp");
                 StartCoroutine(WhipDelay());
                 StartCoroutine(PullBackDelay());
                 playedOnce = true;
