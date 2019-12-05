@@ -32,7 +32,6 @@ public class Movement : MonoBehaviour
     public GameObject[] MilesSprites;
     public SpriteRenderer whip;
     public SpriteRenderer MilesFrontWalk;
-    public GameObject gameOverScreen;
     private Rigidbody rb;
 
     public int score;
@@ -63,11 +62,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (isPaused)
-        {
-            //pause menu goes here
-        }
-        else if (isDead)
+        if (isDead)
         {
             SceneManager.LoadScene("DeathScene");
         }
@@ -254,9 +249,9 @@ public class Movement : MonoBehaviour
         {
             isGrounded = true;
             
-            if (notMoving == true && isGrounded == true && justJumped == false && isRolling == false)
+            if (notMoving == true && isGrounded == true && justJumped == false && isRolling == false && !isWhipping)
                 IdleAnimation();
-            else if (notMoving == false && isGrounded == true && justJumped == false && isRolling == false)
+            else if (notMoving == false && isGrounded == true && justJumped == false && isRolling == false && !isWhipping)
                 RunAnimation();
         }
     }
