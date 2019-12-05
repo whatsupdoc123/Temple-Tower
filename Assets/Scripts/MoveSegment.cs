@@ -8,6 +8,8 @@ public class MoveSegment : MonoBehaviour
 
     public CinemachineVirtualCamera vcam;
     public Transform player;
+    public GameObject Movement;
+    public Movement movementScript;
     public GameObject level;
 
     public float originalPosition;
@@ -27,6 +29,8 @@ public class MoveSegment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Movement = GameObject.FindGameObjectWithTag("Player");
+        movementScript = Movement.GetComponent<Movement>();
         originalPosition = vcam.m_Lens.FieldOfView;
         zoomInPosition = originalPosition - zoomInLength;
         DistanceCalculator();
@@ -66,7 +70,8 @@ public class MoveSegment : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Whip" && !isLocked)
-        { 
+        {
+            movementScript.isLocked = true;
             isLocked = true;
         }
     }

@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
     public bool justJumped = false;
     public bool notMoving = true;
     public bool isWhipping = false;
+    public bool isLocked;
     public GameObject bloodSpawn;
     public GameObject[] MilesSprites;
     public SpriteRenderer whip;
@@ -44,7 +45,8 @@ public class Movement : MonoBehaviour
     private int isGold = 0;
     private int isSilver = 0;
     private int counter = 0;
-    private bool playedOnce =false;
+    public bool playedOnce = false;
+    public bool playedOnce2 = false;
 
     void Awake()
     {
@@ -62,6 +64,19 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (isLocked)
+        {
+            if (Input.GetKeyDown("a") || Input.GetKeyDown("d"))
+            {
+                Debug.Log("Hello");
+                MilesPullBack();
+                WhipPullBack();
+                StartCoroutine(WhipDelay());
+                playedOnce = false;
+                isLocked = false;
+            }
+        }
+
         if (isDead)
         {
             SceneManager.LoadScene("DeathScene");
@@ -70,10 +85,16 @@ public class Movement : MonoBehaviour
         {
             //play whipping animation on Miles and the Whip
             anim.Play("MilesWhipExtend"); //player whipping animation
-            whipAnim.Play("WhipExtend"); //whip estending animation
-            playedOnce = true; //temp variable to make the animation play once and not loop on Update();
+            whipAnim.Play("WhipExtendV2"); //whip estending animation
+            if (!isLocked && playedOnce == false)
+            {
+                Debug.Log("heelp");
+                StartCoroutine(WhipDelay());
+                StartCoroutine(PullBackDelay());
+                playedOnce = true;
+            }
         }
-        else if (!isWhipping)
+        else if (!isWhipping && !isLocked)
         {
             // moves character
             if (Input.GetAxis("Horizontal") != 0)
@@ -311,6 +332,16 @@ public class Movement : MonoBehaviour
     {
         anim.Play("MilesFallLoop"); 
     }
+
+    public void MilesPullBack()
+    {
+        anim.Play("MilesWhipPullback");
+    }
+
+    public void WhipPullBack()
+    {
+        whipAnim.Play("WhipPullback");
+    }
     
     public void TurnOffFrontWalk()
     {
@@ -356,6 +387,21 @@ public class Movement : MonoBehaviour
         {
             FallAnimation();                   
         }
-    }            
+    }
+    
+    IEnumerator PullBackDelay()
+    {
+        yield return new WaitForSeconds(1);
+        WhipPullBack();
+        MilesPullBack();
+        playedOnce2 = true;
+    }
+    
+    IEnumerator WhipDelay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        isWhipping = false;
+        playedOnce = false;
+    }
 }
 

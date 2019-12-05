@@ -5,6 +5,12 @@ using UnityEngine;
 public class DestroyWhip : MonoBehaviour
 {
     public float lifeTime;
+    public Movement player;
+
+    private void Start()
+    {
+        player = GetComponent<Movement>();
+    }
 
     void Update()
     {
