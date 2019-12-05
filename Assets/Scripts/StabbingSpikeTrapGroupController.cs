@@ -7,7 +7,7 @@ public class StabbingSpikeTrapGroupController : MonoBehaviour
     public Animator anim;
     public bool isReady = true;
     public float deployDelayTime;
-    private AudioSource audioData;
+    public AudioSource audioData;
     public AudioClip[] audioClipArray;
     // Start is called before the first frame update
     void Start()

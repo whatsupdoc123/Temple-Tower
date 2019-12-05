@@ -16,10 +16,10 @@ public class triggerBreakableColumn : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        
-       anim.Play("breakableColumn"); 
+        if(collision.gameObject.tag == "Player")
+            anim.Play("breakableColumn"); 
     }
 
 
