@@ -46,7 +46,7 @@ public class MoveSegment : MonoBehaviour
         {
             Zoom();
 
-            if (Input.GetKeyDown("a"))
+            if (Input.GetKeyDown("a") || Input.GetAxis("Horizontal") < 0)
             {
                 isMoving = true;
                 isLocked = false;
@@ -55,7 +55,7 @@ public class MoveSegment : MonoBehaviour
 
                 target.position = new Vector3(level.transform.position.x - distance, level.transform.position.y, level.transform.position.z);
             }
-            else if (Input.GetKeyDown("d"))
+            else if (Input.GetKeyDown("d") || Input.GetAxis("Horizontal") > 0)
             {
                 isMoving = true;
                 isLocked = false;

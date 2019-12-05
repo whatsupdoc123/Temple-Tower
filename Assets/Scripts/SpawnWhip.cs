@@ -13,7 +13,7 @@ public class SpawnWhip : MonoBehaviour
     public bool isWhip;   
     void Update()
     {
-        if (Input.GetAxis("Fire2") > 0)
+        if (Input.GetAxis("Fire2") > 0 || Input.GetButtonDown("Fire4"))
             isWhip = true;
         else
             isWhip = false;

@@ -66,7 +66,7 @@ public class Movement : MonoBehaviour
     {
         if (isLocked)
         {
-            if (Input.GetKeyDown("a") || Input.GetKeyDown("d"))
+            if (Input.GetKeyDown("a") || Input.GetKeyDown("d") || Input.GetAxis("Horizontal") < 0 || Input.GetAxis("Horizontal") > 0)
             {
                 MilesPullBack();
                 WhipPullBack();
@@ -109,7 +109,7 @@ public class Movement : MonoBehaviour
             }    
             transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0f, Input.GetAxis("Vertical") * speed * Time.deltaTime);
 
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) || Input.GetButtonDown("Fire4"))
             {
                 isWhipping = true;
             } //press mouse button to whip
