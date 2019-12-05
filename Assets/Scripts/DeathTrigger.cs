@@ -11,7 +11,6 @@ public class DeathTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             player.isDead = true;
-            Time.timeScale = 0;
             Debug.Log("You died!");
         }
     }
