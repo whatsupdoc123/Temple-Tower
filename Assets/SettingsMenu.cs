@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -18,11 +19,14 @@ public class SettingsMenu : MonoBehaviour
     public GameObject masterText;
     public GameObject musicText;
     public GameObject sfxText;
+    public GameObject firstObject;
+    public GameObject secondObject;
 
 
 
     public void OnSettingsPress()
     {
+        GameObject.Find("EventSystem").GetComponent<EventSystem>().SetSelectedGameObject(firstObject, null);
         settingsButton.SetActive(false);
         resumeButton.SetActive(false);
         quitButton.SetActive(false);
@@ -39,6 +43,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void BackButton()
     {
+        GameObject.Find("EventSystem").GetComponent<EventSystem>().SetSelectedGameObject(secondObject, null);
         settingsButton.SetActive(true);
         resumeButton.SetActive(true);
         quitButton.SetActive(true);

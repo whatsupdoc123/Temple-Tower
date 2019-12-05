@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MainMenuDelay : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class MainMenuDelay : MonoBehaviour
     IEnumerator MenuDelay()
     {
         yield return new WaitForSeconds(10);
+        GameObject.Find("EventSystem").GetComponent<EventSystem>().SetSelectedGameObject(MenuButton, null);
         MenuButton.SetActive(true);
     }
     

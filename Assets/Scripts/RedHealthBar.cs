@@ -10,9 +10,13 @@ public class RedHealthBar : MonoBehaviour
     public GameObject[] MilesHeads;
     public float maxHealth = 100;
     public float curHealth = 100;
+    public GameObject player;
+    public Movement movement;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        movement = player.GetComponent<Movement>();
         RedHealth = GetComponent<Image>();
     }
 
@@ -24,10 +28,10 @@ public class RedHealthBar : MonoBehaviour
     
         curHealth -= adj;
     
-            if(curHealth <0)
+            if(curHealth <= 0)
             {
             curHealth = 0;
-            isDead= true;
+            movement.isDead= true;
             }
             if(curHealth > maxHealth)
             curHealth = maxHealth;

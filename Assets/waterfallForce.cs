@@ -11,7 +11,7 @@ public class waterfallForce : MonoBehaviour
     {
         if (isForced)
         {
-            player.rigidbody.AddForce(-transform.right * .75f, ForceMode.VelocityChange);
+            player.rigidbody.AddForce(-transform.right * 5f, ForceMode.VelocityChange);
         }
     }
     private void OnCollisionStay(Collision collision)

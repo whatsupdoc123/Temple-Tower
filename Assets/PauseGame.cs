@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PauseGame : MonoBehaviour
 {
     public bool gamePaused = false;
     public GameObject pauseMenu;
-
+    public GameObject firstObject;
 
     void Update()
     {
@@ -18,6 +19,7 @@ public class PauseGame : MonoBehaviour
                 gamePaused = true;
                 Cursor.visible = true;
                 pauseMenu.SetActive(true);
+                GameObject.Find("EventSystem").GetComponent<EventSystem>().SetSelectedGameObject(firstObject, null);
             }
 
             else
