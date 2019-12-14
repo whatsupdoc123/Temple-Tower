@@ -9,6 +9,8 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/[Ww]orking AI Files/
+/[Ss]ounds of Temple Tower/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta

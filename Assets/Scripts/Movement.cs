@@ -13,13 +13,14 @@ public class Movement : MonoBehaviour
     private AudioSource audioData;
     public AudioClip[] audioClipArray;
     float defaultScale; 
+    public float distanceGround;
     public float speed;
     public float rollSpeed;
     public float rollLength;
     public float jumpWaitTime;
     public float fallDelayTime;
     public float jumpForce = 6;
-    //public bool isJumping = false;
+    public bool isJumping = false;
     public bool isDead = false;
     public bool isPaused = false;
     public bool isGrounded;
@@ -60,7 +61,8 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         text = scoreText.GetComponent<TextMeshProUGUI>();
         isGrounded = false;
-        defaultScale = transform.localScale.x; // assuming this is facing right    
+        defaultScale = transform.localScale.x; // assuming this is facing right   
+        distanceGround = GetComponent<Collider> ().bounds.extents.y; 
     }
 
     void Update()
@@ -178,10 +180,11 @@ public class Movement : MonoBehaviour
             // applies force vertically if the space key is pressed
             if (isGrounded && (Input.GetKeyDown("space") || Input.GetButton("Fire1")))
             {
-                if (justJumped == false)
+                if (justJumped == false && isJumping == false)
                 {
                     rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
                     justJumped = true;
+                    isJumping = true;
                     JumpAnimation();
                     PlayerJumpSound();
                     StartCoroutine(JumpReset());
@@ -241,6 +244,19 @@ public class Movement : MonoBehaviour
             }
         }
     }
+   /* void FixedUpdate() //version of checking for isGrounded through raycasting
+    {
+        if (!Physics.Raycast (transform.position, -Vector3.up, distanceGround + 0.2f))
+        {
+            isGrounded = false;
+            Debug.Log("Air");
+        }
+        else
+            {
+                isGrounded = true;
+                Debug.Log("Ground");
+            }   
+    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -267,6 +283,7 @@ public class Movement : MonoBehaviour
             isSilver++;
             Destroy(collision.gameObject);
         }
+
     }
 
     void OnCollisionStay(Collision collision)
@@ -274,6 +291,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            isJumping = false;
             
             if (notMoving == true && isGrounded == true && justJumped == false && isRolling == false && !isWhipping)
                 IdleAnimation();

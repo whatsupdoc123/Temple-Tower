@@ -31,7 +31,7 @@ public class RedHealthBar : MonoBehaviour
             if(curHealth <= 0)
             {
             curHealth = 0;
-            movement.isDead= true;
+            movement.isDead = true;
             }
             if(curHealth > maxHealth)
             curHealth = maxHealth;
