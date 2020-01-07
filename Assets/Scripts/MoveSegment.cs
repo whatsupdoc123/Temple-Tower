@@ -13,6 +13,7 @@ public class MoveSegment : MonoBehaviour
     public Movement movementScript;
     public GameObject level;
     public GameObject Minimap;
+    public ParticleSystem Rockslide;
 
     public float originalPosition;
     public float zoomInLength;
@@ -125,11 +126,13 @@ public class MoveSegment : MonoBehaviour
     public void IdleAnim()
     {
         anim.Play("FloorMechanismImdle");
+        Rockslide.Stop();
     }
 
     public void MoveAnim()
     {
         anim.Play("FloorMechanismTurnLeft");
+        Rockslide.Play();
     }
     IEnumerator MinimapHideDelay()
     {
