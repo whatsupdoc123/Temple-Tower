@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 991d806f72f216e4f8009c71844cd1a8
+guid: 5761fef8c6931411f9682bedd1c47861
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -3955,51 +3955,51 @@ ScriptedImporter:
       bones: 160000001500000014000000
     dimension: {x: 0, y: 0}
   boneGOs:
-  - go: {fileID: 7543870818830504179, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 7543870818830504179, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 0
-  - go: {fileID: 7510444572461861155, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 7510444572461861155, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 1
-  - go: {fileID: -8310667605126970914, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: -8310667605126970914, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 2
-  - go: {fileID: 3033078055495420288, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 3033078055495420288, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 3
-  - go: {fileID: 6485317075368247400, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 6485317075368247400, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 4
-  - go: {fileID: -3613766867028282398, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: -3613766867028282398, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 5
-  - go: {fileID: -937778866561216505, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: -937778866561216505, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 6
-  - go: {fileID: 6160717382341043959, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 6160717382341043959, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 7
-  - go: {fileID: 1546754410234269355, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 1546754410234269355, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 8
-  - go: {fileID: -7445100568361359468, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: -7445100568361359468, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 9
-  - go: {fileID: 2757482850548117258, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 2757482850548117258, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 10
-  - go: {fileID: -4155275044980936688, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: -4155275044980936688, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 11
-  - go: {fileID: 8841248021184857455, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 8841248021184857455, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 12
-  - go: {fileID: 8929327269064941567, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 8929327269064941567, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 13
-  - go: {fileID: 4896750344847325611, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 4896750344847325611, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 14
-  - go: {fileID: 201570581857566029, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 201570581857566029, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 15
-  - go: {fileID: 3332978974580529458, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 3332978974580529458, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 16
-  - go: {fileID: -3131164430803009722, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: -3131164430803009722, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 17
-  - go: {fileID: 7520104773109703839, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 7520104773109703839, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 18
-  - go: {fileID: 6347221592606507740, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 6347221592606507740, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 19
-  - go: {fileID: 4747136848598630906, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 4747136848598630906, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 20
-  - go: {fileID: 5685232974687166553, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 5685232974687166553, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 21
-  - go: {fileID: 572280744288893137, guid: 991d806f72f216e4f8009c71844cd1a8, type: 3}
+  - go: {fileID: 572280744288893137, guid: 5761fef8c6931411f9682bedd1c47861, type: 3}
     index: 22
   generateGOHierarchy: 0
   textureAssetName: MilesNew

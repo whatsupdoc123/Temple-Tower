@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9da3483aa33fa05478535d144fc4ae1d
+guid: a095af8d427c544efad6ce5a209635b6
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Lapsus Pro
   fontNames:
   - Lapsus Pro
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9da3483aa33fa05478535d144fc4ae1d, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
